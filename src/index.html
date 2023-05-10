@@ -7,8 +7,30 @@
 
     <script type="module" src="/build/stencil.esm.js"></script>
     <script nomodule src="/build/stencil.js"></script>
+    <style>
+      /* We can only style nested nodes from the light dom when working with slots! */
+      nav a {
+        color: black;
+        text-decoration: none;
+      }
+      nav li {
+        margin: 0.5rem 0;
+      }
+      nav ul {
+        list-style: none;
+      }
+    </style>
   </head>
   <body>
+    <side-drawer heading="Main menu">
+      <nav>
+        <ul>
+          <li><a href="/">1 link</a></li>
+          <li><a href="/">2 link</a></li>
+          <li><a href="/">3 link</a></li>
+        </ul>
+      </nav>
+    </side-drawer>
     <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
   </body>
 </html>
