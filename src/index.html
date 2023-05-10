@@ -22,6 +22,7 @@
     </style>
   </head>
   <body>
+    <button id="sideDrawerButton">Open side menu</button>
     <side-drawer heading="Main menu">
       <nav>
         <ul>
@@ -32,5 +33,12 @@
       </nav>
     </side-drawer>
     <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <script>
+      const sideDrawer = document.querySelector('side-drawer');
+      const sideDrawerButton = document.querySelector('#sideDrawerButton');
+      sideDrawerButton.addEventListener('click', () => {
+        if (!sideDrawer.open) sideDrawer.open = true;
+      })
+    </script>
   </body>
 </html>

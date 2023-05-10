@@ -22,6 +22,7 @@ export namespace Components {
     }
     interface SideDrawer {
         "heading": string;
+        "open": boolean;
     }
 }
 declare global {
@@ -59,6 +60,7 @@ declare namespace LocalJSX {
     }
     interface SideDrawer {
         "heading"?: string;
+        "open"?: boolean;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
